@@ -1,0 +1,136 @@
+#agile-deck-area {
+  padding: 0 2vw;
+  min-height: 92.8vh;
+  max-height: 92.8vh;
+
+  #agile-deck-header {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    max-height: 5vh;
+    #logo {
+      flex-basis: 20%;
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      img {
+        width: 5.5vw;
+        cursor: pointer;
+      }
+
+      #agile-deck-text span {
+        font-size: 1.2vw;
+        color: #02a9f7;
+      }
+    }
+
+    #agile-deck-name {
+      text-align: center;
+      position: relative;
+      flex-basis: 55%;
+      transition: 0.3s;
+
+      input {
+        color: #02a9f7;
+        font-size: 1.8vw;
+        text-align: center;
+        width: 100%;
+      }
+
+      input:disabled {
+        border: none;
+        background-color: transparent;
+      }
+
+      span {
+        top: 0;
+        right: 0;
+        position: absolute;
+        font-size: 1vw;
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  #agile-deck-container {
+    margin-top: 3.5vh;
+    position: relative;
+    #agile-deck-content {
+      display: flex;
+      flex-flow: row wrap;
+
+      #agile-deck-question {
+        flex-basis: 16%;
+        transition: 0.3s;
+        margin-right: 4%;
+      }
+      #agile-deck-answer {
+        flex-basis: 55%;
+        transition: 0.3s;
+        max-height: 81vh;
+      }
+
+      #agile-deck-player {
+        margin-left: 10%;
+        flex-basis: 15%;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #agile-deck-area {
+    padding: 0 !important;
+    #agile-deck-question {
+      display: none;
+    }
+    #agile-deck-answer {
+      flex: 1;
+
+      margin: 0;
+      padding: 0;
+    }
+    #agile-deck-player {
+      flex-basis: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      margin-top: 3vh !important;
+      // display: none;
+    }
+
+    #agile-deck-header {
+      flex-direction: column !important;
+      justify-content: center;
+      text-align: center;
+      min-height: 10vh !important;
+
+      #logo {
+        flex-direction: row !important;
+        justify-content: center;
+        padding: 0;
+        img {
+          width: auto !important;
+          height: 8vh;
+        }
+        #agile-deck-text {
+          padding-top: 2vh;
+          span {
+            font-size: 3.5vh !important;
+          }
+        }
+      }
+      #agile-deck-name {
+        input {
+          font-size: 4vh !important;
+          max-width: 100%;
+        }
+        span i {
+          font-size: 3.5vw !important;
+        }
+      }
+    }
+  }
+}

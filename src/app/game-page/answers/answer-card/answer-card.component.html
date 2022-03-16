@@ -1,0 +1,30 @@
+<div class="answer-card">
+  <div class="answer-card-action">
+    <ul>
+      <li>
+        <i
+          class="fa fa-pencil"
+          aria-hidden="true"
+          (click)="onEdit(); $event.stopPropagation()"
+        ></i>
+      </li>
+      <li *ngIf="deleteAnswer && indexAnswer">
+        <i
+          class="fa fa-trash"
+          aria-hidden="true"
+          (click)="deleteAnswer(indexAnswer); $event.stopPropagation()"
+        ></i>
+      </li>
+    </ul>
+  </div>
+  <div class="answer-card-content">
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="10"
+      [value]="valueTextArea"
+      disabled
+    ></textarea>
+  </div>
+</div>

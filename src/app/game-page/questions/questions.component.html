@@ -1,0 +1,30 @@
+<div id="question-area" class="rounded" *ngIf="questions">
+  <span>
+    <h6>
+      Problems ({{ numberOfQuestionPlayed }}/{{ questions.length }}
+      played)
+    </h6>
+  </span>
+
+  <div id="question-area-content">
+    <div
+      id="question-area-content-parent-ul"
+      [class.question-are-content-parent-ul-hover]="isHoverOnListQuestion"
+      (mouseover)="isHoverOnListQuestion = true"
+      (mouseout)="isHoverOnListQuestion = false"
+    >
+      <ul id="scroll-question">
+        <li
+          [class.li-played]="item.isPlayed"
+          [class.li-playing]="item.isPlaying"
+          *ngFor="let item of questions; let i = index"
+          [id]="'id-question-' + i"
+        >
+          <span *ngIf="item">
+            {{ i + 1 }}. {{ item.question.content.content }}</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

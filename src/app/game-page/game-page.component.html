@@ -1,0 +1,28 @@
+<div id="agile-deck-area">
+  <div id="agile-deck-header">
+    <div id="logo">
+      <img
+        src="../../../../assets//small_logo_fill.png"
+        alt="agile-deck-logo"
+      />
+      <div id="agile-deck-text">
+        <span>Agile Deck</span>
+      </div>
+    </div>
+    <div id="agile-deck-name">
+      <input type="text" [value]="gameName" disabled />
+      <span> <i class="fa fa-pencil" aria-hidden="true"></i></span>
+    </div>
+  </div>
+  <div id="agile-deck-container">
+    <div id="agile-deck-content">
+      <gpage-questions id="agile-deck-question"></gpage-questions>
+
+      <gpage-answers id="agile-deck-answer"></gpage-answers>
+
+      <gpage-players id="agile-deck-player"></gpage-players>
+
+      <!-- <app-history id="agile-deck-history"></app-history> -->
+    </div>
+  </div>
+</div>

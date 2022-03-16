@@ -1,0 +1,42 @@
+<div id="player-area" class="rounded">
+  <div id="action-player">
+    <div id="question-action" class="d-flex justify-content-between">
+      <button
+        (click)="onNextQuestion()"
+        [disabled]="isLastestQuestion"
+      >Next Problem
+      </button>
+      <span><i class="fa fa-upload fa-2x" aria-hidden="true"></i></span>
+    </div>
+    <div id="player-action" class="d-flex justify-content-between">
+      <div class="d-flex flex-column">
+        <span
+        ><h6 *ngIf="players">Players ({{ players.length }})</h6></span
+        >
+        <span
+        ><h6 *ngIf="playersHaveAnswerd">
+            {{ playersHaveAnswerd.length }} Voted
+          </h6></span
+        >
+      </div>
+      <span *ngIf="!this.isFlip" (click)="this.flipCard()"><img src="../../../../assets/icon//eye.png"
+                                                                alt="eye"/></span>
+      <span *ngIf="this.isFlip"><i class="fa fa-eye"></i></span>
+    </div>
+  </div>
+
+  <div id="list-player">
+    <div class="list-player-content">
+      <ul>
+        <li
+          gpagePlayerCard
+          [player]="item"
+          *ngFor="let item of players"
+          [isAnswered]="
+            playersHaveAnswerd?.indexOf(item.id) != -1 ? true : false
+          "
+        ></li>
+      </ul>
+    </div>
+  </div>
+</div>

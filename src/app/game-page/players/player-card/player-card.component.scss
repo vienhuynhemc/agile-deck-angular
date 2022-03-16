@@ -1,0 +1,36 @@
+.player-card-area {
+  span {
+    position: absolute;
+    right: 0.5vw;
+    top: 0;
+    i {
+      cursor: pointer;
+    }
+  }
+  .img-border {
+    border: 0.5px solid #02a9f7;
+    img {
+      width: 6vmax;
+      height: 6vmax;
+      max-height: 6vmax;
+      max-width: 6vmax;
+      object-fit: contain;
+    }
+    .img-not-anwsered {
+      filter: grayscale(100%);
+    }
+  }
+  p {
+    margin-top: 2.5vh;
+    margin-left: 0.5vw;
+  }
+}
+li:last-child {
+  border-bottom: none;
+}
+
+@media screen and (max-width: 680px) {
+  .player-card-area {
+    max-width: 20vw;
+  }
+}

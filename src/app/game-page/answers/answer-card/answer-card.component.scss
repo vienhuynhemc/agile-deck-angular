@@ -1,0 +1,49 @@
+.answer-card:hover .answer-card-action {
+  display: block;
+}
+.answer-card {
+  position: relative;
+  .answer-card-action {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0.5vw;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .answer-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    textarea {
+      width: 90%;
+      height: 100%;
+      resize: none;
+      font-weight: bold;
+      font-size: 1.1vw;
+      cursor: pointer;
+    }
+    textarea:disabled {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  i {
+    font-size: 3vw !important;
+  }
+  .answer-card-content {
+    textarea {
+      font-size: 3vw !important;
+    }
+  }
+}

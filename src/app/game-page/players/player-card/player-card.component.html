@@ -1,0 +1,15 @@
+<div *ngIf="player" class="player-card-area d-flex justify-content-start">
+  <span *ngIf="myPlayerId == player.id">
+    <i class="fa fa-pencil" aria-hidden="true"></i
+  ></span>
+
+  <div class="img-border">
+    <img
+      *ngIf="!player.isAnswer || !isFlip"
+      src="../../../../assets/small_logo_fill.png"
+      [class.img-not-anwsered]="!isAnswered"
+      [alt]="!isAnswered ? 'playerstart' : 'playerAnswered'"
+    />
+  </div>
+  <p *ngIf="player.displayName">{{ player.displayName }}</p>
+</div>

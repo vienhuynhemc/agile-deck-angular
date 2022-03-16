@@ -1,0 +1,124 @@
+<div class="homepage">
+  <div class="container header mx-auto">
+    <div class="row title_color mt-2 login">
+      <h5 class="login" routerLink="/underconstruction-page">Login</h5>
+    </div>
+    <div class="row title_color text-center">
+      <h3 class="">Agile Deck</h3>
+    </div>
+    <div class="row title_color text-center">
+      <h5 class="">Tools that get us closer</h5>
+    </div>
+  </div>
+
+  <div class="container mx-auto">
+    <div class="row">
+      <img
+        src="assets/nd_home.png"
+        class="img_home mx-auto d-block"
+        alt="homepage"
+      />
+    </div>
+
+    <div class="row row_card mx-auto align-center">
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-2 mg-card">
+        <div class="card card_h align-center">
+          <div
+            class="card-header text-center card-color"
+            style="background-color: #02a9f729"
+          >
+            <h6>Default Game</h6>
+          </div>
+          <div class="card-body">
+            <ul class="ul_style">
+              <li><span>.</span>20 Problems</li>
+              <li><span>.</span>Discuss about Lean-Agile-Waterfall</li>
+            </ul>
+
+            <div
+              id="create-default-game"
+              (click)="onClickNewGameDefault()"
+              class="btn_try text-center button"
+              style="background-color: #02a9f780; margin-top: 82px"
+            >
+              Try
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-2 mg-card">
+        <div class="card card_h align-center">
+          <div
+            class="card-header text-center card-color"
+            style="background-color: #fef6e6"
+          >
+            <h6>New Game</h6>
+          </div>
+          <div class="card-body">
+            <ul class="ul_style">
+              <li><span>.</span>Build your Decks</li>
+              <li><span>.</span>Design answer Cards</li>
+              <li><span>.</span>Enjoy with your friends</li>
+            </ul>
+
+            <div
+              class="btn_try text-center button"
+              routerLink="/underconstruction-page"
+              style="background-color: #f7a202; margin-top: 80px"
+            >
+              Build
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="col-lg-3 col-md-12 col-sm-12 col-xs-2 mg-card ">
+        <div class="card card_h">
+          <div class="card card_h align-center">
+            <div class=" card-header text-center card-color" style="background-color:#FEF6E6;">
+              <h6>New Game</h6>
+            </div>
+            <div class="card-body">
+              <ul class="ul_style">
+                <li><span>.</span>Build your Decks</li>
+                <li><span>.</span>Design answer Cards</li>
+                <li><span>.</span>Enjoy with your friends</li>
+              </ul>
+
+              <div class="btn_try text-center button" routerLink="/underconstruction-page"
+                style="background-color:#F7A202;  margin-top:80px;">Build</div>
+
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-lg-3 col-md-12 col-sm-12 col-xs-2 mg-card">
+        <div class="card card_h align-center">
+          <div
+            class="card-header text-center card-color"
+            style="background-color: #edfcf4"
+          >
+            <h6>Create Account</h6>
+          </div>
+          <div class="card-body">
+            <ul class="ul_style">
+              <li><span>.</span>Free</li>
+              <li><span>.</span>Save your Decks</li>
+              <li><span>.</span>Keep Playing History</li>
+              <li><span>.</span>Export Game result</li>
+            </ul>
+
+            <div
+              class="btn_try text-center button"
+              routerLink="/underconstruction-page"
+              style="background-color: #4be08f; margin-top: 60px"
+            >
+              Create
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

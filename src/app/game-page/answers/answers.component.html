@@ -1,0 +1,33 @@
+<div id="answer-area" class="rounded" *ngIf="answers">
+  <div
+    id="current-question"
+    *ngIf="currentQuestion && currentQuestion.question"
+  >
+    <div id="current-question-content" *ngIf="currentQuestion.question.content">
+      {{ currentQuestion.question.content.content }}
+    </div>
+    <span><i class="fa fa-pencil" aria-hidden="true"></i></span>
+  </div>
+
+  <div id="list-answer">
+    <gpage-answer-card
+      class="answer-card-component"
+      *ngFor="let item of answers; let i = index"
+      [item]="item"
+      [@selectDiv]="
+        indexSelected == i && !isEditing ? 'selected' : 'unselected'
+      "
+      (click)="onSelectAnswer(i)"
+      [isEditing]="isEditing"
+      [deleteAnswer]="onDeleteAnswer.bind(this)"
+      [indexAnswer]="i"
+      [indexAnswerTargeted]="indexSelected"
+    ></gpage-answer-card>
+    <div
+      class="answer-card-component answer-card-add"
+      *ngIf="answers.length < 15"
+    >
+      <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+    </div>
+  </div>
+</div>
